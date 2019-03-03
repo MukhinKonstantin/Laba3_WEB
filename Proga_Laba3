@@ -1,0 +1,58 @@
+groupmates=[
+    {
+        "name":u"Константин",
+        "group":"Отф-1 БАП1801",
+        "age":18,
+        "marks":[4,5,5,5,4]
+    },
+    {
+        "name":u"Мария",
+        "group":"Отф-2 БИН1802",
+        "age":17,
+        "marks":[3,4,3,5,4]
+    },
+    {
+        "name":u"Александр",
+        "group":"Отф-2 БИН1801",
+        "age":18,
+        "marks":[3,4,4,4,4]
+    },
+    {
+        "name":u"Андрей",
+        "group":"Отв-1 БАП1801",
+        "age":22,
+        "marks":[5,5,5,5,5]
+    },
+    {
+        "name":u"Егор",
+        "group":"Отф-1 БАП1801",
+        "age":19,
+        "marks":[4,5,5,3,5]
+    },
+    {
+        "name":u"Наташа",
+        "group":"Отф-1 БИК1801",
+        "age":20,
+        "marks":[5,5,3,3,5]
+    }
+]
+def print_students(students):
+    a=float(input("Введите ср.балл"))
+    print(u"Имя студента".ljust(15),
+          u"Группа".ljust(8),
+          u"Возраст".ljust(8),
+          u"Оценки".ljust(20))
+    pred=0
+    for student in students:
+        b=student["marks"]
+        sr=0
+        summa=0
+        for i in b:
+            summa+=i
+        sr=summa/len(b)
+        if sr>=a:
+            print (student["name"].ljust(15),
+                  student["group"].ljust(8),
+                  str(student["age"]).ljust(8),
+                  str(student["marks"]).ljust(20))
+print_students(groupmates)
